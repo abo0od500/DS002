@@ -27,7 +27,7 @@ cl.on("guildMemberAdd", (member) => {
     if(server != inServer){
         
     
-        cl.users.get(user.id).send(`${process.env.MSG}`).catch(console.error);
+        cl.users.get(user.id).send(`${process.env.MSG}`).catch(console.error.message);
         
     
 
