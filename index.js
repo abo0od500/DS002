@@ -33,7 +33,7 @@ cl.on("guildMemberAdd", (member) => {
     
    } catch (err) {
     
-       console.log(err);
+       console.log("ERROR");
   }
 
    
