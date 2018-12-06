@@ -31,9 +31,11 @@ cl.on("guildMemberAdd", (member) => {
         cl.users.get(user.id).send(`${process.env.MSG}`);
         console.log("sent");
     
-   } catch (err) {
+   } catch (error) {
     
-       console.log("ERROR");
+         if (error instanceof DiscordAPIError) Error.captureStackTrace(error);
+         console.error(error);
+   
   }
 
    
