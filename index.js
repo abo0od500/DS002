@@ -26,17 +26,11 @@ cl.on("guildMemberAdd", (member) => {
     
     if(server != inServer){
         
-   try {
     
-        cl.users.get(user.id).send(`${process.env.MSG}`);
-        console.log("sent");
+        cl.users.get(user.id).send(`${process.env.MSG}`).catch(console.error);
+        
     
-   } catch (error) {
-    
-         if (error instanceof DiscordAPIError) Error.captureStackTrace(error);
-         console.error(error);
-   
-  }
+
 
    
     }
